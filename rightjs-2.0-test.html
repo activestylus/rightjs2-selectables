@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>MultiSelects on RightJS 2.0 (Not Working)</title>
+    <script src="rightjs-2.0/right.js" type="text/javascript"></script>
+    <script src="rightjs-2.0/right-selectable.js" type="text/javascript"></script>
+    <script src="rightjs-2.0/application.js" type="text/javascript"></script>
+    <link href="style.css" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form accept-charset="UTF-8" action="/jobs" class="simple_form job" enctype="multipart/form-data" id="upload" method="post">
+      <h2>Single Select (Working)</h2>
+      <fieldset>
+        <div class="input select required">
+          <label class="select required" for="job_schedule">Schedule</label>
+          <select class="select required" id="job_schedule" name="job[schedule]">
+            <option value=""></option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Flex Time">Flex Time</option>
+            <option value="Seasonal">Seasonal</option>
+            <option value="Any">Any</option>
+          </select>
+        </div>
+      </fieldset>
+      <h2>Custom Multi Selects (Basic works but custom behavior is broken, no limit to selection, no spans, etc)</h2>
+      <fieldset>
+        <div class='job' id='industry_list'>
+          <div class='multi'>
+            <div class="input select required">
+              <label class="select required" for="job_occupation_list">Occupations <small>(max. 3)</small></label>
+              <select class="select required" id="job_occupation_list" multiple="multiple" name="job[occupation_list][]">
+                <option value="Account Management (Commissioned)">Account Management (Commissioned)</option>
+                <option value="Account Management (Non-Commissioned)">Account Management (Non-Commissioned)</option>
+                <option value="Accounts Payable/Receivable">Accounts Payable/Receivable</option>
+                <option value="Actuarial Analysis">Actuarial Analysis</option>
+                <option value="Administrative Support">Administrative Support</option>
+                <option value="Aeronautic/Avionic Engineering">Aeronautic/Avionic Engineering</option>
+                <option value="Architecture/Interior Design">Architecture/Interior Design</option>
+                <option value="Assembly/Assembly Line">Assembly/Assembly Line</option>
+                <option value="Attorney">Attorney</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+  </form>
+  </body>
+</html>

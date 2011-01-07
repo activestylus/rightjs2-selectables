@@ -1,0 +1,9 @@
+span, h2, li, label, select {font: 14px arial;}
+fieldset {background:#eee;}
+label {
+  display:block;
+  margin-top: 10px;
+}
+.right-selectable li {background:#fff;}
+
+.multi span {display:block;}
