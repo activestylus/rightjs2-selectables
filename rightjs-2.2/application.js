@@ -76,12 +76,12 @@ var MyRemoteSelectable = new Class(Selectable, {
 
 var View = {
   initialize: function() {
+    $$('ul.dropdown').each(function(element) {
+      new MySelectable(element);
+    });
     $$('.select select').each(function(element) {
       var id = element.get('id'), select;
       switch (id) {
-        case 'job_actions':
-          select = new MySelectable(id);
-          break;
         case 'job_category':
         case 'order_job_attributes_category':
           select = new MyRemoteSelectable(id);
